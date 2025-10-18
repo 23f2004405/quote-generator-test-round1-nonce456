@@ -1,7 +1,7 @@
 # quote-generator-test-round1-nonce456
 
 ## Overview
-Create a minimal web app that shows a random inspirational quote on page load.
+Update quote generator to show a daily quote and allow users to copy quotes to clipboard. Update README.md accordingly.
 
 ## Setup
 Open `index.html` in a browser or visit the GitHub Pages URL.
@@ -13,9 +13,9 @@ Open `index.html` in a browser or visit the GitHub Pages URL.
 
 ## Evaluation Criteria
 - Repo has MIT license
-- README.md is professional
-- Page displays a quote on load
-- Page reloads without errors
+- README.md updated professionally
+- Page displays daily quote correctly
+- Copy-to-clipboard functionality works
 
 ## License
 MIT License
