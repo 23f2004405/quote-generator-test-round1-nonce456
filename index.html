@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Inspirational Quote</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f8ff;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  .quote-container {
+    max-width: 600px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  .quote {
+    font-size: 1.5em;
+    font-style: italic;
+    margin-bottom: 20px;
+  }
+  .author {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #555;
+  }
+</style>
+</head>
+<body>
+<div class="quote-container">
+  <div class="quote" id="quote">Loading quote...</div>
+  <div class="author" id="author"></div>
+</div>
+<script>
+  const quotes = [
+    { text: "The best way to get started is to quit talking and begin doing.", author: "Walt Disney" },
+    { text: "Don't let yesterday take up too much of today.", author: "Will Rogers" },
+    { text: "It's not whether you get knocked down, it's whether you get up.", author: "Vince Lombardi" },
+    { text: "If you are working on something exciting, it will keep you motivated.", author: "Emily Couric" },
+    { text: "Success is not in what you have, but who you are.", author: "Bo Bennett" },
+    { text: "The only way to do great work is to love what you do.", author: "Steve Jobs" },
+    { text: "The secret of getting ahead is getting started.", author: "Mark Twain" },
+    { text: "Dream big and dare to fail.", author: "Norman Vaughan" },
+    { text: "You are never too old to set another goal or to dream a new dream.", author: "C.S. Lewis" },
+    { text: "What you get by achieving your goals is not as important as what you become by achieving your goals.", author: "Zig Ziglar" }
+  ];
+
+  function getRandomQuote() {
+    const index = Math.floor(Math.random() * quotes.length);
+    return quotes[index];
+  }
+
+  window.onload = () => {
+    const quote = getRandomQuote();
+    document.getElementById('quote').innerText = '"' + quote.text + '"';
+    document.getElementById('author').innerText = '- ' + quote.author;
+  };
+</script>
+</body>
+</html>
